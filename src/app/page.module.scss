@@ -21,11 +21,18 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .hero__greeting {
   display: block;
-  max-width: 420px;
+  width: 420px;
 }
 
 .hero__title-wrapper {
@@ -43,4 +50,56 @@
 
 .hero__line-wrapper {
   font-size: 20px;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
+.about__title {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.about__text {
+  font-size: 20px;
+  text-indent: 20px;
+}
+
+.constacts__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.contacts__title {
+  margin-bottom: 30px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.contacts__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px
+}
+
+.contacts__link {
+  &:hover {
+    color: $imp-text-color;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
