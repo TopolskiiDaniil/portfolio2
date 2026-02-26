@@ -1,0 +1,51 @@
+@use "@/shared/styles/variables" as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover .logo__letter {
+    transform: translateY(-2px);
+
+    &:last-child {
+      transition-delay: 0.05s;
+    }
+  }
+}
+
+.logo__icon {
+  margin-top: 2px;
+  font-size: 1rem;
+  color: $imp-text-color;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.logo__footer {
+  & .logo__icon {
+    font-size: 0.800em;
+  }
+
+  & .logo__text {
+    font-size: 1.25rem;
+  }
+}
+
+.logo__text {
+  display: flex;
+  font-weight: 800;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.logo__letter {
+  color: $imp-text-color;
+  display: inline-block;
+  transition: transform 0.2s ease;
+
+  &:first-child {
+    margin-right: 1px;
+  }
+}

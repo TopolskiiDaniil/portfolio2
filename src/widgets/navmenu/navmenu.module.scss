@@ -1,0 +1,93 @@
+@use "@/shared/styles/variables" as *;
+
+.navmenu {
+  position: absolute;
+  top: 60px;
+  left: 10%;
+  width: 80%;
+  background: inherit;
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out,
+    visibility 0.3s;
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  @media (min-width: $breakpoint-md) {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+
+.navmenu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  @media (min-width: $breakpoint-md) {
+    justify-content: end;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+.navmenu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navmenu__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0;
+  width: 50%;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+    box-shadow: inset 0 0 5px $imp-text-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    display: block;
+    width: 0px;
+    height: 5px;
+    background: $imp-text-color;
+    border-radius: 16px;
+    transition: 0.3s ease-out;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+
+    &:hover::after,
+    &:focus-visible::after {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,57 @@
+@use "@/shared/styles/variables" as *;
+
+.burger-button {
+  position: relative;
+  width: 27px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--open .icon {
+    background: transparent;
+
+    &::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+.icon,
+.icon::before,
+.icon::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: $imp-text-color;
+  transition: all 0.3s;
+}
+
+.icon {
+  top: calc(50% - 1.5px);
+}
+
+.icon::before {
+  content: "";
+  top: -8px;
+}
+
+.icon::after {
+  content: "";
+  top: 8px;
+}

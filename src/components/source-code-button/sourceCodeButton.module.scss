@@ -1,0 +1,23 @@
+@use "@/shared/styles/variables" as *;
+
+.scbutton {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  min-width: 80px;
+  height: 35px;
+  padding: 10px 0;
+  background-color: $imp-text-color;
+  border-radius: 50vw;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+    box-shadow: inset 0 0 5px $imp-text-color;
+  }
+}

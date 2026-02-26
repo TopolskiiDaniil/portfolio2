@@ -1,0 +1,46 @@
+@use "@/shared/styles/variables" as *;
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  max-width: 1100px;
+  width: 100%;
+  padding: 120px 60px;
+}
+
+.accent {
+  color: $imp-text-color;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero__greeting {
+  display: block;
+  max-width: 420px;
+}
+
+.hero__title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.hero__introducing {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.hero__line-wrapper {
+  font-size: 20px;
+}

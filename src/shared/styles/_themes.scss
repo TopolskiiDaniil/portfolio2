@@ -1,0 +1,9 @@
+@mixin theme-light {
+  --color-bg: #ffffff;
+  --color-text-primary: #282c34
+}
+
+@mixin theme-dark {
+  --color-bg: linear-gradient(270deg, #1b1429, #140f23);
+  --color-text-primary: #ffffff;
+}
