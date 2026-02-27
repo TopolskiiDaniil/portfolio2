@@ -8,12 +8,14 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <nav className={styles.header__nav}>
-        <Link className={styles.header__logoLink} href="/" aria-label="На главную">
-          <Logo />
-        </Link>
-        <NavMenu />
-      </nav>
+      <div className={styles.header__content}>
+        <nav className={styles.header__nav}>
+          <Link className={styles.header__logoLink} href="/" aria-label="На главную">
+            <Logo />
+          </Link>
+          <NavMenu />
+        </nav>
+      </div>
     </header>
   );
 };

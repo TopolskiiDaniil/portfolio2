@@ -5,8 +5,10 @@
   top: 60px;
   left: 10%;
   width: 80%;
-  background: inherit;
+  isolation: isolate;
+  -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
+  border-radius: 8px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);

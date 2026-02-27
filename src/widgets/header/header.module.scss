@@ -1,10 +1,23 @@
+@use "@/shared/styles/variables" as *;
+
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 16px 32px;
+  left: 50%;
   z-index: 1000;
+  width: 100%;
+  transform: translateX(-50%);
+  background-color: #35323268;
+  box-shadow: 0 0 10px 5px #35323268;
+}
+
+.header__content {
+  margin: 0 auto;
+  padding: 16px 32px;
+  max-width: 1200px;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 20px 60px
+  }
 }
 
 .header__nav {
