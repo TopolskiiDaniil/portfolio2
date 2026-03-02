@@ -7,75 +7,55 @@ import BurgerButton from "@/components/burger-button/BurgerButton";
 import { RxHome, RxIdCard, RxBackpack, RxFileText } from "react-icons/rx";
 import SourceCodeButton from "@/components/source-code-button/SourceCodeButton";
 
+const NAV_LINKS = [
+  { href: "/", label: "Главная", icon: <RxHome /> },
+  { href: "/about", label: "Обо мне", icon: <RxIdCard /> },
+  { href: "/projects", label: "Проекты", icon: <RxBackpack /> },
+  { href: "/resume", label: "Резюме", icon: <RxFileText /> },
+];
+
 export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
-
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  }
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+        closeMenu();
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
   return (
-    <>
-      <div ref={menuRef}>
-        <BurgerButton onClick={toggleMenu} isOpen={isOpen} />
+    <div ref={menuRef}>
+      <BurgerButton onClick={toggleMenu} isOpen={isOpen} />
 
+      <div className={`${styles.navmenu} ${isOpen ? styles['navmenu--open'] : ''}`}>
+        <ul className={styles.navmenu__list}>
+          {NAV_LINKS.map((link) => (
+            <li key={link.href} className={styles.navmenu__item}>
+              <Link
+                href={link.href}
+                className={styles.navmenu__link}
+                onClick={closeMenu}
+              >
+                {link.icon}
+                <span>{link.label}</span>
+              </Link>
+            </li>
+          ))}
 
-        <div className={`${styles.navmenu} ${isOpen ? styles['navmenu--open'] : ''}`}>
-          <ul className={styles.navmenu__list}>
-            <li className={styles.navmenu__item}>
-              <Link
-                href="/"
-                className={styles.navmenu__link}
-                onClick={() => setIsOpen(false)}>
-                <RxHome /><span>Главная</span>
-              </Link>
-            </li>
-            <li className={styles.navmenu__item}>
-              <Link
-                href="/about"
-                className={styles.navmenu__link}
-                onClick={() => setIsOpen(false)}>
-                <RxIdCard /><span>Обо мне</span>
-              </Link>
-            </li>
-            <li className={styles.navmenu__item}>
-              <Link
-                href="/projects"
-                className={styles.navmenu__link}
-                onClick={() => setIsOpen(false)}>
-                <RxBackpack /><span>Проекты</span>
-              </Link>
-            </li>
-            <li className={styles.navmenu__item}>
-              <Link
-                href="/resume"
-                className={styles.navmenu__link}
-                onClick={() => setIsOpen(false)}>
-                <RxFileText /><span>Резюме</span>
-              </Link>
-            </li>
-            <li className={styles.navmenu__item}>
-              <SourceCodeButton />
-            </li>
-          </ul>
-        </div>
+          <li className={styles.navmenu__item}>
+            <SourceCodeButton />
+          </li>
+        </ul>
       </div>
-    </>
+    </div>
   );
 }

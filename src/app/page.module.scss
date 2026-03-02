@@ -80,11 +80,22 @@
   align-items: center;
   gap: 30px;
   margin: 0 auto;
-  margin-bottom: 120px;
 }
 
 .about__title {
   font-size: 35px;
+}
+
+.about__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  @media (min-width:$breakpoint-lg) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .about__content {
