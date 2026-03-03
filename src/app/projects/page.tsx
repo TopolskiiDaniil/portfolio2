@@ -23,7 +23,7 @@ export default function ProjectsPage() {
                   height={219}
                   alt="проект «Шесть городов»" />
                 <p className={styles.project__description}>
-                  Успешно выполненный проект в рамках интенсива "JavaScript. Разработка сложных клиентских приложений".
+                  Успешно выполненный проект в рамках интенсива «JavaScript. Разработка сложных клиентских приложений».
                 </p>
                 <footer className={styles.project__footer}>
                   <Link
@@ -56,7 +56,7 @@ export default function ProjectsPage() {
                   height={219}
                   alt="проект «Большое путешествие»" />
                 <p className={styles.project__description}>
-                  Успешно выполненный проект в рамках интенсива "JavaScript. Архитектура клиентских приложений".
+                  Успешно выполненный проект в рамках интенсива «JavaScript. Архитектура клиентских приложений».
                 </p>
                 <footer className={styles.project__footer}>
                   <Link
@@ -82,7 +82,7 @@ export default function ProjectsPage() {
                   height={300}
                   alt="проект «Кекстаграм»" />
                 <p className={styles.project__description}>
-                  Успешно выполненный проект в рамках интенсива "JavaScript. Профессиональная разработка веб-интерфейсов".
+                  Успешно выполненный проект в рамках интенсива «JavaScript. Профессиональная разработка веб-интерфейсов».
                 </p>
                 <footer className={styles.project__footer}>
                   <Link
@@ -108,7 +108,7 @@ export default function ProjectsPage() {
                   height={219}
                   alt="проект «Кэт энерджи»" />
                 <p className={styles.project__description}>
-                  Успешно выполненный проект в рамках интенсива "HTML и CSS. Адаптивная вёрстка и автоматизация".
+                  Успешно выполненный проект в рамках интенсива «HTML и CSS. Адаптивная вёрстка и автоматизация».
                 </p>
                 <footer className={styles.project__footer}>
                   <Link
@@ -141,7 +141,7 @@ export default function ProjectsPage() {
                   height={300}
                   alt="проект «Седона»" />
                 <p className={styles.project__description}>
-                  Успешно выполненный проект в рамках интенсива "HTML и CSS. Профессиональная вёрстка сайтов".
+                  Успешно выполненный проект в рамках интенсива «HTML и CSS. Профессиональная вёрстка сайтов».
                 </p>
                 <footer className={styles.project__footer}>
                   <Link
