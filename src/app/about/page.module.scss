@@ -1,0 +1,79 @@
+@use "@/shared/styles/variables" as *;
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 140px 40px 132px;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 180px 70px 132px;
+  }
+}
+
+.accent {
+  color: $imp-text-color;
+}
+
+.biography__container,
+.skills__container,
+.tools__container,
+.activity__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.biography__title,
+.skills__title,
+.tools__title,
+.activity__title {
+  font-size: 35px;
+}
+
+.biography__content {
+  font-size: 25px;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 30px;
+  }
+}
+
+.skills__list,
+.tools__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skills__item,
+.tools__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 100vw;
+  transition: transform 1s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: $imp-text-color;
+    box-shadow: 1px 1px 20px 3px #2cec999c;
+  }
+}

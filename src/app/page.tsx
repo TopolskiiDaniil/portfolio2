@@ -6,7 +6,7 @@ import { FaTelegram, FaLinkedin } from "react-icons/fa";
 import { RxGithubLogo } from "react-icons/rx";
 import PhotoContainer from "@/components/photo-container/PhotoContainer";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
