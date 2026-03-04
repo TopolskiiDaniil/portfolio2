@@ -9,7 +9,7 @@ export default function PhotoContainer() {
     <Tilt scale={1.05} borderRadius={'50%'} >
       <div className={styles.photoWrapper}>
         <Image
-          src="/images/my-photo.jpg"
+          src="/images/my-photo2.png"
           alt="Daniil Topolskii"
           width={400}
           height={400}
