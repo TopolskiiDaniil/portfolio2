@@ -1,0 +1,48 @@
+@use "@/shared/styles/variables" as *;
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.hero__greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  max-width: 300px;
+  min-width: 0;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 420px;
+  }
+}
+
+.hero__title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+}
+
+.hero__introducing {
+  font-size: 25px;
+  flex: 1;
+  min-width: 0;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 35px;
+  }
+}
+
+.hero__line-wrapper {
+  font-size: 20px;
+}

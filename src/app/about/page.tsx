@@ -3,7 +3,7 @@ import styles from "./page.module.scss";
 import dynamic from "next/dynamic";
 
 const GithubCalendar = dynamic(
-  () => import("@/components/github-calendar/GithubCalendar"),
+  () => import("@/components/ui/github-calendar/GithubCalendar"),
   { ssr: false }
 );
 

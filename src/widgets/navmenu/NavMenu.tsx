@@ -3,15 +3,15 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./navmenu.module.scss";
 import Link from "next/link";
-import BurgerButton from "@/components/burger-button/BurgerButton";
+import BurgerButton from "@/components/ui/burger-button/BurgerButton";
 import { RxHome, RxIdCard, RxBackpack, RxFileText } from "react-icons/rx";
-import SourceCodeButton from "@/components/source-code-button/SourceCodeButton";
+import SourceCodeButton from "@/components/ui/source-code-button/SourceCodeButton";
 
 const NAV_LINKS = [
   { href: "/", label: "Главная", icon: <RxHome /> },
   { href: "/about", label: "Обо мне", icon: <RxIdCard /> },
   { href: "/projects", label: "Проекты", icon: <RxBackpack /> },
-  { href: "/resume", label: "Резюме", icon: <RxFileText /> },
+  // { href: "/resume", label: "Резюме", icon: <RxFileText /> },
 ];
 
 export default function NavMenu() {

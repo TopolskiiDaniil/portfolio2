@@ -1,7 +1,7 @@
 import styles from "./header.module.scss";
 import NavMenu from "../navmenu/NavMenu";
 import Link from "next/link";
-import { Logo } from "@/components/logo/Logo";
+import { Logo } from "@/components/ui/logo/Logo";
 
 export default function Header() {
   console.log(styles);
