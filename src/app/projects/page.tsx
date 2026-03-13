@@ -33,7 +33,7 @@ export default function ProjectsPage() {
                     <li>сортировка по цене и рейтингу</li>
                     <li>форма авторизации</li>
                     <li>создание отзывов и их валидация</li>
-                    <li>работа с "избранными" объявлениями</li>
+                    <li>работа с «избранными» объявлениями</li>
                   </ul>
                   <h4 className={styles[`project__title-list`]}>Технологии:</h4>
                   <ul className={styles.project__list}>
