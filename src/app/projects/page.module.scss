@@ -39,7 +39,7 @@
   font-size: 35px;
 }
 
-.project__list {
+.projects__list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -87,7 +87,13 @@
 }
 
 .project__description {
-  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project__list {
+  list-style: inside;
 }
 
 .project__footer {
@@ -95,6 +101,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin-top: auto;
 }
 
 .project__button {
