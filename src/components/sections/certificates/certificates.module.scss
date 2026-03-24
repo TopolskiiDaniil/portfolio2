@@ -1,0 +1,39 @@
+.certificates__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.certificates__title {
+  font-size: 35px;
+}
+
+.certificates__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.certificates__item {
+  transition: transform 700ms ease;
+
+  &:hover {
+    transform: scale(1.5);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.certificates__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.certificates__image {
+  object-fit: contain;
+}

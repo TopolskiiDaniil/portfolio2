@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
 import dynamic from "next/dynamic";
+import Certificates from "@/components/sections/certificates/Certificates";
 
 const GithubCalendar = dynamic(
   () => import("@/components/ui/github-calendar/GithubCalendar"),
@@ -91,6 +92,8 @@ export default function AboutPage() {
             </li>
           </ul>
         </section>
+
+        <Certificates />
 
         <section className={styles.activity__container}>
           <h2 className={styles.activity__title}> Моя активность</h2>
