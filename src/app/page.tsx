@@ -1,6 +1,5 @@
 import styles from "./page.module.scss";
 import Hero from "@/components/sections/hero/Hero";
-import About from "@/components/sections/about/About";
 import { SocialLinks } from "@/components/ui/social-links/SocialLinks";
 
 
@@ -9,7 +8,6 @@ export default function HomePage() {
     <div className={styles.page}>
       <main className={styles.main}>
         <Hero />
-        {/* <About /> */}
         <section className={styles.contacts__container}>
           <h2 className={styles.contacts__title}>Найдите меня в социальных сетях</h2>
           <div className={styles.contacts__links}>
